@@ -2,6 +2,30 @@
 ## Description
 A RESTful API built with FastAPI and PostgreSQL. Implements CRUD operations and follows TDD principles using pytest. Includes Dockerfile and Docker Compose for easy deployment.
 
+## Project Structure
+```
+fastapi-crud
+    ├── docker-compose.yml
+    └── src
+        ├── Dockerfile
+        ├── app
+        │   ├── __init__.py
+        │   ├── api
+        │   │   ├── __init__.py
+        │   │   ├── crud.py
+        │   │   ├── models.py
+        │   │   ├── notes.py
+        │   │   └── ping.py
+        │   ├── db.py
+        │   └── main.py
+        ├── requirements.txt
+        └── tests
+            ├── __init__.py
+            ├── conftest.py
+            ├── test_notes.py
+            └── test_ping.py
+```
+
 ## Features
 - CRUD operations
 - TDD with pytest
@@ -23,6 +47,8 @@ git clone git@github.com:rentbest/fastapi_testing.git
 docker-compose up --build
 ```
 3. Access the API at http://localhost:8002.
+4. It's also convenient to test the API using the built-in Swagger interface in FastAPI, available at http://localhost:8002/docs.
+![swagger](images/swagger.png)
 
 ### Running Tests
 To run the tests, use:
